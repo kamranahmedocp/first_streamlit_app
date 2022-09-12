@@ -8,4 +8,4 @@ streamlit.text('Omega 3 and Blueberry Oatmeal')
 
 streamlit.text('Kale , Spinach & Bucket Smoothie')
 
-streamlit.text('Hard Boiuled Free-Range Egg')
+streamlit.text('Hard Boiled Free-Range Egg')
