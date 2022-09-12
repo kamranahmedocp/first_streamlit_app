@@ -6,6 +6,4 @@ streamlit.title('Breakfast Menu')
 
 streamlit.text('Omega 3 and Blueberry Oatmeal')
 
-
-
-streamlit.text('Ale , Spinach & Bucket Smoothie')
+streamlit.text('Kale , Spinach & Bucket Smoothie')
