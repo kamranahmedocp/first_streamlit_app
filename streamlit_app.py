@@ -34,9 +34,16 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 # we need to bring in anotherPython Package liberary : This one is called request
+
+# but before this Adding New section to dispaly  fruitvice api response
+streamlit.header('Fruitvice Fruit Advise!')
+
+# now getting package
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
+streamlit.text(fruityvice_response.json())
+
+
 
 
 
