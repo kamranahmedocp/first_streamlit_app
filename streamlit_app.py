@@ -39,28 +39,29 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header('Fruitvice Fruit Advise!')
 
 # now getting package
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json())
 
+#   import requests
+#   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+#   streamlit.text(fruityvice_response.json())
+
+# above three lines completed  so  commenting out so that it would not run with the subsequent code   
 
 # Let's Get the Fruityvice Data Looking a Little Nicer
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response.json())  # just write the data to  the screen
+#    import requests
+#    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+#    streamlit.text(fruityvice_response.json())  # just write the data to  the screen
 
 # take the jason version of the respinse and normalize it 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# output it the screen as a table
-streamlit.dataframe(fruityvice_normalized)
+#    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#    output it the screen as a table
+#    streamlit.dataframe(fruityvice_normalized)
+
+# above fice lines completed  so  commenting out so that it would not run with the subsequent code   
+
 
 # Let's removed the line of raw JSON, and separate the base URL from the fruit name (which will make it easier to use a variable there).
-
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
-
-# streamlit.text(fruityvice_response.json())  # just write the data to  the screen
-
 # take the jason version of the respinse and normalize it 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # output it the screen as a table
