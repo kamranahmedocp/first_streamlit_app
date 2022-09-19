@@ -1,3 +1,5 @@
+# Note all lines without starting # is a part of running code: 
+
 import streamlit
 
 streamlit.title('My Parents New Healthy Diner')
