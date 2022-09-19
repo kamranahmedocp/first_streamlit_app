@@ -60,12 +60,12 @@ streamlit.header('Fruitvice Fruit Advise!')
 
 
 # Let's removed the line of raw JSON, and separate the base URL from the fruit name (which will make it easier to use a variable there).
-   import requests
-   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 # take the jason version of the respinse and normalize it 
-   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # output it the screen as a table
-   streamlit.dataframe(fruityvice_normalized)
+streamlit.dataframe(fruityvice_normalized)
 
 # above code lines completed and ran suxccefully  so  commenting out so that it would not run with the subsequent code   
 
