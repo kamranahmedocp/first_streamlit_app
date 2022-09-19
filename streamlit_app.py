@@ -39,12 +39,6 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"
 streamlit.text(fruityvice_response)
 
 
-# New Section to display fruityvice apli response
-streamlit.header('Fruitvice Fruit Advise!')
-
-import requests
-fruitvice_response = request.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.txt(fruitvice_response.jason())
 
 
 
