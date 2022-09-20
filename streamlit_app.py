@@ -111,7 +111,10 @@ my_cur.execute("select * from fruit_load_list")
 #  Lets get all the rows
 my_data_rows = my_cur.fetchall()
 
-streamlit.text("The fruit load list contains:")
+# streamlit.text("The fruit load list contains:")
+# replacing above line with following to make things look little nicer 
+streamlit.header("The fruit load list contains:")
+
 streamlit.text(my_data_rows)
 
 # above executed succefully .
