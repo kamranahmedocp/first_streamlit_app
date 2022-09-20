@@ -40,9 +40,10 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 # we need to bring in anotherPython Package liberary : This one is called request
-
+# import requests
 # but before this Adding
 # New section to dispaly  fruitvice api response
+
 streamlit.header('Fruitvice Fruit Advise!')
 
 #  Add a Text Entry Box and Send the Input to Fruityvice as Part of the API Call
