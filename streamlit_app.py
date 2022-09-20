@@ -115,7 +115,7 @@ my_data_rows = my_cur.fetchall()
 # replacing above line with following to make things look little nicer 
 streamlit.header("The fruit load list contains:")
 
-streamlit.text(my_data_rows)
+streamlit.dataframe(my_data_rows)
 
 # above executed succefully .
 
