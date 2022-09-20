@@ -41,8 +41,31 @@ streamlit.dataframe(fruits_to_show)
 
 # we need to bring in anotherPython Package liberary : This one is called request
 
-# but before this Adding New section to dispaly  fruitvice api response
+# but before this Adding
+# New section to dispaly  fruitvice api response
 streamlit.header('Fruitvice Fruit Advise!')
+
+#  Add a Text Entry Box and Send the Input to Fruityvice as Part of the API Call
+
+try:
+  fruit_choice = streamlit.text_input('What fruit would you like information about?')
+  if not fruit_choice:
+     streamlit.error("Please select a fruit to get information.")
+  else:
+      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+      streamlit.dataframe(fruityvice_normalized)
+      
+except URLError as e:
+  streamlit.error()
+ 
+# Above is the latest renwed code 
+----------------------------------------------------------------------------------
+
+#    output it the screen as a table
+
+#-----------------------------------------------------------------------------------------
+
 
 # now getting package
 
@@ -76,23 +99,27 @@ streamlit.header('Fruitvice Fruit Advise!')
 # above code lines completed and ran suxccefully  so  commenting out so that it would not run with the subsequent code   
 
 
-
 #  Add a Text Entry Box and Send the Input to Fruityvice as Part of the API Call
 
-fruit_choice = streamlit.text_input('What fruit would you like information about?', 'Kiwi')
-streamlit.write('The user entered', fruit_choice)
+#  fruit_choice = streamlit.text_input('What fruit would you like information about?', 'Kiwi')
+#  streamlit.write('The user entered', fruit_choice)
 
+# import request
+#   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #    output it the screen as a table
-streamlit.dataframe(fruityvice_normalized)
+#  streamlit.dataframe(fruityvice_normalized)
 #
+# Commenting out above 
+
 
 #  -------------------------------------------------
 # Put All the Import Commands Together, At the Top 
 # ---------------------------------------------------
+
+
+
 
 # don't run anything past here while we troubleshoot
 streamlit.stop()
