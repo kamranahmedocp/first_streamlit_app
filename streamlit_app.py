@@ -125,12 +125,12 @@ streamlit.dataframe(my_data_rows)
 fruit_choice = streamlit.text_input('What fruit would you like to add?', 'jackfruit')
 streamlit.write('Thanks for adding', fruit_choice)
 
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+#  import requests
+#  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #    output it the screen as a table
-streamlit.dataframe(fruityvice_normalized)
+#  streamlit.dataframe(fruityvice_normalized)
 
 
 
