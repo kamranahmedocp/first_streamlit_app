@@ -120,7 +120,8 @@ streamlit.dataframe(my_data_rows)
 # above executed succefully .
 
 
-#  Add a Second Text Entry Box:  and Send the Input to Fruityvice as Part of the API Call
+#  Add a Second Text Entry Box: 
+#  Allow the end user to add a fruite to  the list:
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?', 'jackfruit')
 streamlit.write('Thanks for adding', add_my_fruit)
