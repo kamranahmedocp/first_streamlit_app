@@ -103,6 +103,7 @@ except URLError as e:
 streamlit.stop()
 
 
+
 # now getting package
 
 #   import requests
@@ -173,6 +174,8 @@ streamlit.stop()
 
 # commenting out , so that can run the following code only 
 
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
 # Let's Query Some Data, Instead
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
@@ -192,6 +195,38 @@ streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 # above executed succefully .
+
+#---------------------------------------------------------------------
+# rewriting above 
+#---------------------------------------------------------------------
+
+# above executed succefully .
+
+
+
+
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+
+
+
+
+streamlit.header("The fruit load list contain:")
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("select * from fruit_load_list")
+
+# following line will fatch only one row
+#  my_data_row = my_cur.fetchone()   
+
+#  Lets get all the rows
+my_data_rows = my_cur.fetchall()
+
+# streamlit.text("The fruit load list contains:")
+# replacing above line with following to make things look little nicer 
+streamlit.header("The fruit load list contains:")
+
+streamlit.dataframe(my_data_rows)
 
 
 #  Add a Second Text Entry Box: 
